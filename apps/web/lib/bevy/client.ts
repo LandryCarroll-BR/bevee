@@ -1,4 +1,4 @@
-import { createBevy, defineCollection, reference } from '@repo/bevy'
+import { createBevy, defineCollection, reference } from '@bevy/core'
 import { z } from 'zod'
 
 export const blogSchema = z.object({
