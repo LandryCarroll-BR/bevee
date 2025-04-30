@@ -1,6 +1,6 @@
-# 📦 Bevy
+# 📦 bevee
 
-**Bevy** is a lightweight, schema-first content layer inspired by Astro's Content Collections — but built to work with any frontend framework (like Next.js). It provides type-safe collection definitions, flexible data loaders, and runtime validation using Zod.
+**bevee** is a lightweight, schema-first content layer inspired by Astro's Content Collections — but built to work with any frontend framework (like Next.js). It provides type-safe collection definitions, flexible data loaders, and runtime validation using Zod.
 
 ## ✨ Features
 
@@ -17,7 +17,7 @@
 ### 1. Install
 
 ```bash
-npm install @repo/bevy zod
+npm install @repo/bevee zod
 ```
 
 ### 2. Define your collections
@@ -25,7 +25,7 @@ npm install @repo/bevy zod
 ```ts
 // content/schema.ts
 import { z } from 'zod'
-import { reference, defineCollection } from '@repo/bevy'
+import { reference, defineCollection } from '@repo/bevee'
 
 export const blogSchema = z.object({
 	title: z.string(),
@@ -44,10 +44,10 @@ export const authorSchema = z.object({
 
 ```ts
 // content/index.ts
-import { createBevy, defineCollection } from '@repo/bevy'
+import { createbevee, defineCollection } from '@repo/bevee'
 import { blogSchema, authorSchema } from './schema'
 
-export const bevy = createBevy({
+export const bevee = createbevee({
 	blog: defineCollection({
 		name: 'blog',
 		schema: blogSchema,
@@ -84,37 +84,37 @@ export const bevy = createBevy({
 ### Load everything:
 
 ```ts
-await bevy.loadAll()
+await bevee.loadAll()
 ```
 
 ### Get all blog posts:
 
 ```ts
-const posts = await bevy.getCollection('blog')
+const posts = await bevee.getCollection('blog')
 ```
 
 ### Filter collection entries:
 
 ```ts
-const published = await bevy.getCollection('blog', (entry) => entry.data.slug !== 'draft')
+const published = await bevee.getCollection('blog', (entry) => entry.data.slug !== 'draft')
 ```
 
 ### Get a single entry by ID:
 
 ```ts
-const post = bevy.getEntry('blog', 'welcome')
+const post = bevee.getEntry('blog', 'welcome')
 ```
 
 ### Resolve references:
 
 ```ts
-const author = bevy.getEntry(post.data.author)
+const author = bevee.getEntry(post.data.author)
 ```
 
 ### Resolve multiple references:
 
 ```ts
-const related = bevy.getEntries(post.data.relatedPosts)
+const related = bevee.getEntries(post.data.relatedPosts)
 ```
 
 ## 📚 Concepts
@@ -122,7 +122,7 @@ const related = bevy.getEntries(post.data.relatedPosts)
 | Concept                | Description                                                   |
 | ---------------------- | ------------------------------------------------------------- |
 | `defineCollection()`   | Defines a typed, schema-validated collection                  |
-| `createBevy()`         | Initializes Bevy with your collections                        |
+| `createbevee()`        | Initializes bevee with your collections                       |
 | `loader()`             | Provides entries for each collection (can be remote or local) |
 | `reference('authors')` | Defines a relationship to another collection                  |
 
@@ -139,4 +139,4 @@ All entries are type-checked at compile time using `z.infer<typeof schema>`, and
 
 ## 💬 Feedback
 
-This is a pre-release. Please open issues or feature requests as you experiment! We’re excited to see what you build with Bevy.
+This is a pre-release. Please open issues or feature requests as you experiment! We’re excited to see what you build with bevee.

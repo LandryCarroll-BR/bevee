@@ -1,4 +1,4 @@
-export * from './create-bevy'
+export * from './create-bevee'
 export * from './define-collection'
 export * from './load'
 export * from './query'

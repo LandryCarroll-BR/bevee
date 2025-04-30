@@ -1,5 +1,5 @@
 {
-	"extends": "@bevy/typescript-config/nextjs.json",
+	"extends": "@bevee/typescript-config/nextjs.json",
 	"compilerOptions": {
 		"plugins": [
 			{

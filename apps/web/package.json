@@ -11,16 +11,16 @@
 		"check-types": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@bevy/core": "workspace:*",
-		"@bevy/ui": "workspace:*",
+		"@bevee/core": "workspace:*",
+		"@bevee/ui": "workspace:*",
 		"next": "^15.3.0",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
 		"zod": "^3.22.4"
 	},
 	"devDependencies": {
-		"@bevy/eslint-config": "workspace:*",
-		"@bevy/typescript-config": "workspace:*",
+		"@bevee/eslint-config": "workspace:*",
+		"@bevee/typescript-config": "workspace:*",
 		"@types/node": "^22.15.3",
 		"@types/react": "19.1.0",
 		"@types/react-dom": "19.1.1",

@@ -1,5 +1,5 @@
 {
-	"name": "@bevy/eslint-config",
+	"name": "@bevee/eslint-config",
 	"version": "0.0.0",
 	"type": "module",
 	"private": true,

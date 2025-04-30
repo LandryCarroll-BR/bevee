@@ -1,5 +1,5 @@
 {
-	"extends": "@bevy/typescript-config/react-library.json",
+	"extends": "@bevee/typescript-config/react-library.json",
 	"compilerOptions": {
 		"outDir": "dist"
 	},

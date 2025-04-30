@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { CollectionDefinition, CollectionEntry, Reference } from './types'
 
-export function createBevy<CM extends Record<string, CollectionDefinition<z.ZodTypeAny>>>(collections: CM) {
+export function createbevee<CM extends Record<string, CollectionDefinition<z.ZodTypeAny>>>(collections: CM) {
 	type CollectionName = Extract<keyof CM, string>
 
 	type InferEntry<C extends CollectionName> = CollectionEntry<CM[C]['schema']>
