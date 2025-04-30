@@ -18,7 +18,7 @@ export interface Collections {} // <-- intentionally empty!
 export type CollectionsMap = Collections
 
 export type CollectionDefinition<T extends z.ZodTypeAny> = {
-	__isbeviesCollection: true // 🧠 a unique marker
+	__isbeveeCollection: true // 🧠 a unique marker
 	name: CollectionName
 	schema: T
 	loader: () => Promise<CollectionEntry<T>[]>

@@ -7,7 +7,7 @@ export function defineCollection<T extends ZodType>(def: {
 	loader: () => Promise<Array<{ id: string; data: z.infer<T> }>>
 }): CollectionDefinition<T> {
 	return {
-		__isbeviesCollection: true,
+		__isbeveeCollection: true,
 		...def,
 	}
 }

@@ -1,7 +1,7 @@
 import Image, { type ImageProps } from 'next/image'
-import { Button } from '@bevies/ui/button'
+import { Button } from '@bevee/ui/button'
 import styles from './page.module.css'
-import { bevies } from '../lib/bevies/client'
+import { bevee } from '../lib/bevee/client'
 
 type Props = Omit<ImageProps, 'src'> & {
 	srcLight: string
@@ -20,7 +20,7 @@ const ThemeImage = (props: Props) => {
 }
 
 export default async function Home() {
-	const blogs = await bevies.getCollection('blogs')
+	const blogs = await bevee.getCollection('blogs')
 
 	return (
 		<div className={styles.page}>
