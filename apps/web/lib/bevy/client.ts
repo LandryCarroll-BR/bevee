@@ -1,4 +1,4 @@
-import { createbevee, defineCollection, reference } from '@bevee/core'
+import { createBevies, defineCollection, reference } from '@bevies/core'
 import { z } from 'zod'
 
 export const blogSchema = z.object({
@@ -13,7 +13,7 @@ export const authorSchema = z.object({
 	bio: z.string(),
 })
 
-export const bevee = createbevee({
+export const bevies = createBevies({
 	blogs: defineCollection({
 		name: 'blogs',
 		schema: blogSchema,

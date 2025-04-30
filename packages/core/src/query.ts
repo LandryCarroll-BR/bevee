@@ -1,4 +1,4 @@
-// bevee/src/query.ts
+// bevies/src/query.ts
 import { getStore } from './load'
 import type { CollectionsMap, CollectionEntry, Reference } from './types'
 
